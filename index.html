@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* Replace the URL below with your actual image link */
+         /*   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), */
+                        background-image:url('/3de3d124-dc42-45d6-a71d-468707e75098.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            color:;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar Styles */
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover Effect */
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            color: #ffeb3b; /* Changes to yellow on hover */
+        }
+
+        /* The Click Effect Class */
+        .clicked {
+            background-color: #ff4757 !important; /* Changes to red on click */
+            color: white !important;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Main Content */
+        .hero {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color:white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 10px;
+            }
+            nav ul li a {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+         
+
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a onclick="navigate(this, 'index.html')">Home</a></li>
+            <li><a onclick="navigate(this, 'music.html')">Music</a></li>
+            <li><a onclick="navigate(this, 'movies.html')">Movies</a></li>
+            <li><a onclick="navigate(this, 'manga.html')">Comics</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to My Space</h1>
+        <p>Explore my world of music, movies, and literature.</p>
+    </div>
+
+</div>
+
+    <script>
+        function navigate(element, url) {
+            // 1. Add the "clicked" class to change color immediately
+            element.classList.add('clicked');
+
+            // 2. Wait for 1 second (1000 milliseconds)
+            setTimeout(function() {
+                // 3. Move to the next page
+                window.location.href = url;
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
